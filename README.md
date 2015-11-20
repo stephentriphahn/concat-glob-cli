@@ -1,4 +1,4 @@
-## concat-cli
+## concat-glob-cli
 
 Just a simple wrapper around the [concat](https://www.npmjs.org/package/concat) module, to concatenate files via the command line, and support ** glob.
 
@@ -22,4 +22,4 @@ Uses the argument after -f flag to make a path to pass into the glob module.  If
 $ concat-cli -f 'path/to/js/**/*.js' -o bundle.js
 ```
 
-If registering as an npm script (the main reason this module was created), it is not necessary to include the path a string.
+If registering as an npm script (the main reason this module was created), it is not necessary to include the path as a string.
