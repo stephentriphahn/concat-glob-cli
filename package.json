@@ -9,6 +9,7 @@
     "cli",
     "glob"
   ],
+  "repository": "stephentriphahn/concat-glob-cli",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

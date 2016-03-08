@@ -8,14 +8,15 @@ var concat = require('concat'),
     filesIdx = args.indexOf('-f') > args.indexOf('--files') ?
                args.indexOf('-f') : args.indexOf('--files'),
     outputIdx = args.indexOf('-o') > args.indexOf('--output') ?
-                args.indexOf('-o') : args.indexOf('--output');
+                args.indexOf('-o') : args.indexOf('--output'),
+    nosort = args.indexOf('--nosort') >= 0;
 
 
 
 var path = args[filesIdx+1];
 
 
-var jsPattern = new glob(path, function(er, files) {
+var jsPattern = new glob(path, {nosort: nosort}, function(er, files) {
 
   console.log(dest);
   concat(files, dest, function (error) {
